@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="result">
+    <h2>Result: {{ result }}</h2>
+    <p>Probability: {{ probability|floatformat:4 }}%</p>
+    <img src="{{ image_url }}" alt="Analyzed Image">
+</div>
+<a href="{% url 'home' %}" class="back-link">Analyze another image</a>
+{% endblock %}
